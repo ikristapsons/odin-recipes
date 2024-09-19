@@ -3,17 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Odin recipes</title>
+    <title>Ikris recipes</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1 class="title">Odin recipes</h1>
-    <div class="card">
-      <ul>
-        <li><a href="./recipes/chilli.html">Chilli Con Carne</a></li>
-        <li><a href="./recipes/garlic_chicken.html">Garlic Chicken</a></li>
-        <li><a href="./recipes/sour_chicken.html">Sour Chicken</a></li>
-      </ul>
+    <div class="wrapper">
+      <header class="top">
+        <h1 class="title">Ikris recipes</h1>
+      </header>
+
+      <nav class="flex-nav">
+        <a href="#" class="toggleNav"
+          ><img src="./images/menu.svg" height="24" width="24" />Menu</a
+        >
+        <ul>
+          <li><a href="#">Item 01</a></li>
+          <li><a href="#">Item 02</a></li>
+          <li><a href="#">Item 03</a></li>
+          <li><a href="#">Item 04</a></li>
+          <li><a href="#">Item 05</a></li>
+          <li><a href="#">Item 06</a></li>
+          <li class="icon">
+            <a href="https://x.com/"
+              ><img src="images/paw.svg" height="24" width="24" />
+            </a>
+          </li>
+          <li class="icon">
+            <a href="https://facebook.com/">
+              <img src="images/paw2.svg" height="24" width="24" />
+            </a>
+          </li>
+          <li class="icon">
+            <a href="https://github.com/">
+              <img src="images/twopaws.svg" height="24" width="24" />
+            </a>
+          </li>
+          <li class="icon">
+            <a href="https://instagram.com/">
+              <img src="images/cat.svg" height="24" width="24" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="hero"><img src="./images/sourchicken.webp" /></section>
+
+      <section class="details">
+        <ul>
+          <li><a href="./recipes/chilli.html">Chilli Con Carne</a></li>
+          <li><a href="./recipes/garlic_chicken.html">Garlic Chicken</a></li>
+          <li><a href="./recipes/sour_chicken.html">Sour Chicken</a></li>
+        </ul>
+      </section>
     </div>
+    <script>
+      $(function () {
+        $(".toggleNav").on("click", function () {
+          $(".flex-nav ul").toggleClass("open");
+        });
+      });
+    </script>
   </body>
 </html>
